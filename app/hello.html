@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body ng-app="myApp">
+
+<ul>
+    <li><a href="#/">First Page</a></li>
+    <li><a href="#/MrLi">MrLi</a></li>
+    <li><a href="#/BHL">BHL</a></li>
+</ul>
+
+<div ng-view></div>
+
+
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="http://apps.bdimg.com/libs/angular-route/1.3.13/angular-route.js"></script>
+<script>
+    angular.module('myApp', ['ngRoute'])
+            .config(['$routeProvider', function ($routeProvider) {
+                $routeProvider
+                        .when('/', {template: 'This is the MainPage!'})
+                        .when('/MrLi', {template: 'This is the Page 4 MrLi!'})
+                        .when('/BHL', {template: 'This is the Page 4 BHL!'})
+                        .otherwise({redirectTo: '/'});
+            }]);
+</script>
+</body>
+</html>

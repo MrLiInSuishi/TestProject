@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MrLi</title>
+
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body ng-app="login_app" ng-controller="login_ctrl">
+
+<form  class="form-horizontal">
+    {{name | firstLetterUppercase}}
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" style="width: 300px;" id="exampleInputEmail1" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" style="width: 300px;" id="exampleInputPassword1" placeholder="Password">
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<!--<form class="form-horizontal">-->
+    <!--Username: <input type="text" ng-model="user.name" class="input"> <br>-->
+    <!--Password: <input type="password" ng-model="user.password" class="input"> <br>-->
+    <!--<button ng-click="postLogin()" class="btn btn_success">Login</button>-->
+    <!--<br>-->
+    <!--<li><a href="#">Forget your password?</a></li>-->
+<!--</form>-->
+
+
+<script src="Test/login.js"></script>
+</body>
+</html>

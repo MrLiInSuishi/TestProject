@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h3>{{family.entity.fullName | uppercase}}</h3>
+        <!--<h3 ng-show="family.entity.region != ''">{{"   -> " + family.entity.region | uppercase}}</h3>-->
+
+        <!--<button ng-click="handleModify()">Modify</button>-->
+
+        <ul>
+            <li ng-repeat="child in family.children | orderBy:'fullName'">
+                <tree family="child"></tree>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

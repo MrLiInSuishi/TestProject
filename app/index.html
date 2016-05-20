@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+
+  <div ng-app="li" ng-controller="helloController">
+      Name: <input ng-model="name">
+      The name : {{ name }}
+  </div>
+
+  <script>
+    var app = angular.module('li', []);
+    app.controller('helloController', function ($scope) {
+      $scope.name = "MrLi"
+    });
+
+  </script>
+
+
+  <div ng-app="myApps" ng-controller="personCtrl">
+
+      名: <input type="text" ng-model="firstName"><br>
+      姓: <input type="text" ng-model="lastName"><br>
+      <br>
+      姓名: {{fullName()}}
+
+  </div>
+
+  <script>
+      var app = angular.module('myApps', []);
+      app.controller('personCtrl', function($scope) {
+          $scope.firstName = "John";
+          $scope.lastName = "Doe";
+          $scope.fullName = function() {
+              return $scope.firstName + " " + $scope.lastName;
+          }
+      });
+  </script>
+
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
